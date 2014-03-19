@@ -1,0 +1,826 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+@import "base";
+
+// apply a natural box layout model to all elements
+// Paul Irish
+*, *:before, *:after {
+    @include box-sizing(border-box);
+    // -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+// body
+body {
+    color: #000;
+    font-family: $roboto-slab;
+    font-size: 100%;
+}
+
+// generic elements
+p, h1, h2, h3, h4, h5, h6, ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: $color-primary;
+
+    &.blockHover {
+        &:hover {
+            background-color: $color-primary;
+            color: #FFF;
+            padding: 1px 3px;
+        }
+    }
+}
+
+p {
+    color: $color-text;
+    line-height: 150%;
+    font-weight: 300;
+}
+
+ul, ol {
+    color: $color-text;
+    font-weight: 300;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $source-sans;
+    font-weight: normal;
+}
+
+h1 {
+    color: #000;
+    font-size: 2.625em; //42
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 100%;
+    margin-bottom: 0.381em; //16
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.750em; //28
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+h3 {
+    color: #313131;
+    font-size: 1.250em;
+    font-weight: 900;
+    margin-bottom: 0.583em; //20
+}
+
+// panels
+.panel {
+    background-repeat: repeat;
+    border-bottom: 1px solid #ececec;
+    padding: 4.375em 0; //70
+    min-height: 43.750em; //700
+
+    h1, h2, h3, h4, h5, h6, p {
+        text-align: center;
+    }
+
+    p {
+        padding: 0 10em;
+    }
+    
+    &.panelLight {
+        background-image: url(#{$img-path}patterns/canvas-pattern-light.png);
+    }
+    
+    &.panelDark {
+        background-image: url(#{$img-path}patterns/canvas-pattern-dark.png);
+    }
+}
+
+.boxes {
+    margin-top: 4.250em; //68
+    text-align: center;
+
+    div {
+        background-color: #FFF;
+        border: 5px solid #f6f6f6;
+        padding: 3.000em 2.000em; //48 32
+    }
+
+    i {
+        margin-bottom: 2.500em; //40
+    }
+
+    p {
+        padding: 0;
+        font-size: 0.875em; //14
+        line-height: 130%;
+    }
+}
+
+// header
+.panelHeader {
+    background-image: url(#{$img-path}patterns/canvas-pattern-dark.png);
+    min-height: 0;
+    padding: 0;
+
+    .black-fill {
+        background-color: rgba(0,0,0,0.88);
+    }
+
+    &.home {
+        background-image: url(#{$img-path}header-bgd.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 43.750em; //700
+        @include background-size(cover);
+
+        header {
+            margin-bottom: 8.375em; //134
+        }
+    }
+
+    h1 {
+        color: #FFF;
+        font-size: 3.375em; //54
+        letter-spacing: 2px;
+        margin-bottom: 0.667em; //36
+        text-align: left;
+    }
+
+    p {
+        color: #c3c3c3;
+        font-weight: 100;
+        padding: 0;
+        text-align: left;
+        width: 35.000em; //560
+    }
+
+    header {
+
+        margin-bottom: 2.500em;
+
+        .logo {
+            padding-top: 2.500em;
+
+            a {
+                display: inline-block;
+            }
+        }
+
+        nav {
+            li {
+                width: 9.000em;
+                float: left;
+                margin-right: 1.500em;
+
+                a {
+                    border-top: 3px solid transparent;
+                    display: block;
+                    @include fontStyle($source-sans, 1.125em, 400, #FFF); //18
+                    padding-top: 2.500em;
+
+                    span {
+                        display: block;
+                        @include fontStyle($roboto-slab, 0.722em, 300, #c3c3c3); //13
+                    }
+
+                    &:hover, &.active {
+                        border-top: 3px solid $color-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.panelWhy {
+    
+}
+
+.panelCourses {
+    
+    h2 {
+        margin-top: 2.500em;  //70
+        margin-bottom: 1.429em; //40
+        text-align: left;
+
+        span {
+        font-size: 1.4em;
+        }
+    }
+
+    .course {
+        border-top: 1px solid #DDD;
+        padding: 1.250em 0; //20
+
+        h3 {
+            font-family: $roboto-slab;
+            font-size: 1.500em; //30
+            font-weight: 400;
+            margin: 0;
+            text-align: left;
+        }
+
+        h4 {
+            text-align: left;
+            margin-bottom: 0.5em; //8
+        }
+
+        p {
+            padding: 0;
+            text-align: left;
+        }
+
+        .span3:first-child {
+            border: 5px solid #f6f6f6;
+            padding: 1em 0;
+        }
+
+        .span3:last-child {
+    
+            p {
+                font-size: 0.875em; //14
+                line-height: 140%;
+            }
+
+            p:first-child {
+                font-style: italic;
+                margin-bottom: 1.428em; //20
+            }
+
+            .ico {
+                float: left;
+                margin-right: 12px;
+            }
+        }
+
+        &:hover {
+            background-color: #F2F2F2;
+
+            .span3:first-child {
+                border: 5px solid transparent;
+            }
+        }
+
+        .course-side-info {
+            margin-bottom: 1.125em; //20
+        }
+
+    }
+
+    .due {
+        .course:hover {
+            opacity: 0.2;
+        }
+    }
+}
+
+.course-landing {
+    padding: 4.375em 0; //70
+    
+    > header {
+        padding-right: 14em; //230
+        position: relative;
+    
+        .course-logo {
+            position: absolute;
+            right: 0;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 3.500em;
+        }
+    }
+
+    p {
+        margin-bottom: 2.500em; //40
+    }
+
+    ul {
+        margin: 0  0 2.500em 20px;
+        list-style-type: circle;
+    }
+
+    h1 {
+        font-size: 5.000em; //80
+        margin-bottom: 0;
+        line-height: 80%;
+
+    }
+
+    h4 {
+        font-size: 1.875em; //30
+        margin-bottom: 1.333em; //40
+    }
+
+    h2 {
+        margin-bottom: 0.4285em; //12
+    }
+    
+    .calendar-item {
+        border-bottom: 1px solid #DDD;
+        margin-bottom: 1.5em;
+
+        &.last {
+            border-bottom: 0;
+            margin-bottom: 3em;
+        }
+
+        > div {
+            margin-bottom: 1em;
+        }
+
+        ol {
+            // list-style-type: square;
+            margin-left: 3.9375em; //63
+        }
+
+        .ico {
+            float: left;
+            margin-right: 12px;
+        }
+
+        p {
+            margin: 0;
+            line-height: 110%;
+        }
+
+        .date-time {
+            font-size: 0.8125em; //13
+            font-weight: 600;
+            color: #000;
+        }
+    }
+
+    .instructor {
+        margin-bottom: 1.6em;
+
+        img {
+            float: left;
+            margin-right: 1.2em;
+        }
+    }
+
+    aside {
+        background-color: #F4F4F4;
+        
+        .side-top {
+            background-color: #EEE;
+            padding: 1.5em;
+        }
+
+        .calendar-item {
+            border: 0;
+            
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        .address {
+            margin-top: 1em;
+        }
+
+        .info {
+            padding: 1.5em;
+
+            p, ul {
+                font-size: 0.8125em; //13
+                margin: 0 0 0.8em 0;
+            }
+
+            ul {
+                margin-left: 1.5em;
+            }
+        }
+    }
+
+}
+
+// makes the .ico-calendar icon a container to add a day with the data-day attribute
+.ico-calendar:after {
+    content: attr(data-day);
+    color: #000;
+    display: block;
+    position: relative;
+    top: 7px;
+    left: 0;
+    text-indent: 0;
+    font-family: $source-sans;
+    font-weight: 600;
+    text-align: center;
+    font-style: normal;
+}
+
+// location ico fix
+.ico-location {
+    width: 29px;
+}
+
+// footer
+footer {
+    background-image: url(#{$img-path}patterns/canvas-pattern-dark.png);
+
+    h2 {
+        color: #FFF;
+    }
+
+    h3 {
+        color: #FFF;
+        font-size: 1.250em;
+        font-weight: 600;
+        margin-bottom: 0.833em; //24
+    }
+
+    p {
+        color: #c8c8c8;
+        line-height: 130%;
+    }
+
+    .footerMisc {
+        background-color: rgba(0,0,0,0.88);
+        border-bottom: 1px solid #222;
+        padding: 3.5em 0;
+    }
+
+    .footerMain {
+        background-color: rgba(0,0,0,0.9);
+        padding: 3.125em 0;
+
+        .ico-logo-header {
+            margin-bottom: 1.25em;
+        }
+
+        .social {
+            margin-top: 1.125em;
+
+            li {
+                display: inline-block;
+                margin-right: 1.250em;
+                    
+                a {
+                    opacity: 1;
+
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+
+        .links {
+
+            li{
+                margin-bottom: 0.5em; //8
+
+                a {
+                    color: #c8c8c8;
+                    font-weight: 100;
+
+                    &:hover {
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+
+
+// background-image: url(#{$img-path}video-placeholder.jpg);
+
+
+.container {
+    @include container;
+
+    .span1 {@include span-columns(1, 12);}
+    .span2 {@include span-columns(2, 12);}
+    .span3 {@include span-columns(3, 12);}
+    .span4 {@include span-columns(4, 12);}
+    .span5 {@include span-columns(5, 12);}
+    .span6 {@include span-columns(6, 12);}
+    .span7 {@include span-columns(7, 12);}
+    .span8 {@include span-columns(8, 12);}
+    .span9 {@include span-columns(9, 12);}
+    .span10 {@include span-columns(10, 12);}
+    .span11 {@include span-columns(11, 12);}
+    .span12 {@include span-columns(12, 12);}
+
+    .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
+        &:last-child {
+            @include omega;    
+        }
+    }
+
+    .pad8 {
+        @include pad(2, 2);
+    }
+}
+
+//  Logo hover state
+.ico-logo-header {
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+
+
+
+// hepler classes
+.centered {
+    text-align: center;
+}
+
+.righted {
+    float: right;
+}
+
+.highlighted {
+    color: $color-primary;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

@@ -1,0 +1,69 @@
+---
+layout: home
+title: Academia Origami
+---
+
+<section class="panel panelDark panelWhy" id="why">
+    <div class="container">
+        <h1>Porqué Origami?</h1>
+        <p>Nos enfocamos en diseñar cursos para estudiantes y profesionales que quieran extender sus conocimientos técnicos y creativos.</p>
+        <div class="boxes clearfix">
+            <div class="span4">
+                <i class="ico ico-console">Origami Academy - Expanda su conocimiento</i>
+                <h3>Expanda su conocimiento</h3>
+                <p>Aprenda a trabajar y crear con las últimas tecnologías y tendencias que rigen el mercado laboral.</p>
+            </div>
+            <div class="span4">
+                <i class="ico ico-screen">Origami Academy - Promueva su Portafolio</i>
+                <h3>Promueva su Portafolio</h3>
+                <p>Aumente sus posibilidades de ser considerado para un puesto con los proyectos finales de los cursos.</p>
+            </div>
+            <div class="span4">
+                <i class="ico ico-clock">Origami Academy - Horarios accesibles</i>
+                <h3>Horarios accesibles</h3>
+                <p>Nuestros horarios nocturnos son especialmente para los profesionales que trabajan durante el día.</p>
+            </div>
+        </div>
+    </div>
+</section>        
+<!-- End section 2 //-->
+
+<section class="panel panelLight panelCourses">
+    <div class="container">
+        <h1>Próximos Cursos</h1>
+        <h2>Marzo / Abril <span>'04</span></h2>
+        {% for page in site.pages %}
+            {% if page.is-curso == true %}
+                {% if page.due == true %}
+                <a class="due">
+                {% else %}
+                <a href="{{ page.url }}">
+                {% endif %}
+                    <div class="course clearfix">
+                        <div class="span3 centered">
+                            <img src="img/cursos/{{ page.category }}/{{ page.logo }}" alt="{{ page.title-eng }}"/>
+                        </div>
+                        <div class="span6">
+                            <h3>{{ page.title }}</h3>
+                            <h4>{{ page.title-eng }}</h4>
+                            <p>{{ page.small-description }}</p>
+                        </div>
+                        <div class="span3">
+                            <div>
+                                <p>{{ page.course-duration }}</p>
+                                <div class="course-side-info">
+                                    <i class="ico ico-calendar" data-day="{{ page.start-day }}"></i>
+                                    <p>{{ page.small-schedule }}</p>
+                                </div>
+                                <div class="course-side-info">
+                                    <i class="ico ico-location"></i>
+                                    <p>{{ page.small-location }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

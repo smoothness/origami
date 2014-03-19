@@ -1,0 +1,49 @@
+// Base styles
+
+// imports
+@import "compass/utilities/sprites";
+@import "compass/typography/text/replacement";
+@import "compass/css3/transform";
+@import "compass/css3/transition";
+@import "susy";
+
+// variables
+$img-path: "../img/";
+$color-primary: #71bf31;
+$color-text: #7f7f7f;
+// Fonts
+$roboto-slab: 'Roboto Slab', serif;
+$source-sans: 'Source Sans Pro', sans-serif;
+
+// sprites
+$icons: sprite-map("ico/*.png", $layout: smart);
+
+.ico { 
+    background-image: $icons;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+ 
+@each $i in sprite_names($icons) {
+    .ico-#{$i} {
+        background-position: sprite-position($icons, $i);
+        @include sprite-dimensions($icons, $i);
+        @include hide-text;
+    }
+}
+
+// Susy grids
+$total-columns  : 12;             // a 12-column grid
+$column-width   : 4.063em;        // each column is 65px wide
+$gutter-width   : 1.500em;        // 24px gutters between columns
+// $grid-padding   : $gutter-width;  // grid-padding equal to gutters
+
+// Mixins
+
+@mixin fontStyle($family, $size, $weight, $color) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}

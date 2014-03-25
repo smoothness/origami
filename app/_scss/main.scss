@@ -156,7 +156,6 @@ h1 {
     color: #000;
     font-size: 2.625em; //42
     font-weight: 900;
-    letter-spacing: 2px;
     line-height: 100%;
     margin-bottom: 0.381em; //16
     text-transform: uppercase;
@@ -463,6 +462,7 @@ h3 {
         img {
             float: left;
             margin-right: 1.2em;
+            border: 5px solid #BBB;
         }
     }
 
@@ -502,6 +502,20 @@ h3 {
 
 }
 
+// internal pages - content
+.padded-content {
+    padding: 3em 0;
+
+    h2 {
+        margin: 2em 0 1em;
+    }
+}
+
+.map {
+    p {
+        text-align: right;
+    }
+}
 // makes the .ico-calendar icon a container to add a day with the data-day attribute
 .ico-calendar:after {
     content: attr(data-day);
@@ -632,8 +646,6 @@ footer {
         opacity: 0.6;
     }
 }
-
-
 
 
 // hepler classes

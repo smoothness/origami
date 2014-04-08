@@ -32,8 +32,10 @@ title: Academia Origami
     <div class="container">
         <h1>Próximos Cursos</h1>
         <h2>Marzo / Abril <span>'04</span></h2>
+
         {% for page in site.pages %}
             {% if page.is-curso == true %}
+
                 {% if page.due == true %}
                 <a class="due">
                 {% else %}

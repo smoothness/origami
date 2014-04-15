@@ -401,7 +401,7 @@ h3 {
     }
 
     ul {
-        margin: 0  0 2.500em 20px;
+        margin: 0 0 2.500em 20px;
         list-style-type: circle;
     }
 
@@ -442,12 +442,15 @@ h3 {
         }
 
         ol {
-            margin: 0 0 1em 3.9375em; //63
+            margin: 0 0 2em 3.9375em; //63
 
             ol {
                 margin-left: 2em;
                 list-style-type: lower-latin;
+            }
 
+            ul {
+                margin-bottom: 0!important;
             }
         }
 
@@ -673,6 +676,9 @@ footer {
     color: $color-primary;
 }
 
+.no-margin {
+    margin: 0!important;
+}
 
 
 

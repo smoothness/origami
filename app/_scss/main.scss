@@ -10,6 +10,9 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+@import "base";
+
+
 html,
 button,
 input,
@@ -97,9 +100,6 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-
-@import "base";
 
 // apply a natural box layout model to all elements
 // Paul Irish
@@ -197,6 +197,24 @@ h3 {
     &.panelDark {
         background-image: url(#{$img-path}patterns/canvas-pattern-dark.png);
     }
+
+    @include breakpoint($mid) {
+        padding: 2.500em 0;
+
+        .container {
+
+            p {
+                padding: 0 1em;
+            }
+            .span4 {
+                float: none;
+                width: 100%;
+                display: block;
+                margin-right: 0;
+                margin-bottom: 2em;
+            }
+        }
+    }
 }
 
 .boxes {
@@ -217,6 +235,20 @@ h3 {
         padding: 0;
         font-size: 0.875em; //14
         line-height: 130%;
+    }
+
+    @include breakpoint($mid) {
+        margin-top: 1em;
+
+        div {
+            background-color: transparent;
+            border: 0 none;
+            padding: 0 1em;
+        }
+
+        i {
+            margin-bottom: 0.500em; //40
+        }
     }
 }
 
@@ -258,6 +290,25 @@ h3 {
         width: 35.000em; //560
     }
 
+    @include breakpoint($mid) {
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 1em;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 2em;
+        }
+
+        &.home {
+            min-height: 37.750em;
+        }
+    }
+
     header {
 
         margin-bottom: 2.500em;
@@ -293,6 +344,31 @@ h3 {
                 }
             }
         }
+
+        @include breakpoint($mid) {
+
+            margin-bottom: 3em !important;
+
+            .span8 {
+                float: none !important;
+                width: 100% !important;
+                display: block !important;
+
+                li {
+                    width: 50% !important;
+                    margin-right: 0 !important;
+
+                    a {
+                        padding-top: 0;
+                        border-top: 0 none !important;
+                    }
+                }
+            }
+
+            .logo {
+                text-align: center !important;
+            }
+        }
     }
 }
 
@@ -310,6 +386,10 @@ h3 {
         span {
         font-size: 1.4em;
         }
+    }
+    
+    .container > a {
+        display: block;
     }
 
     .course {
@@ -369,6 +449,21 @@ h3 {
             margin-bottom: 1.125em; //20
         }
 
+        @include breakpoint($mid) {
+          
+          > div {
+            width: 100%;
+            float: none;
+            display: block;
+            margin: 0;
+            padding: 0 3%;
+          }
+
+          .span3:first-child {
+            display: none;
+          }
+        }
+
     }
 
     .due {
@@ -393,6 +488,30 @@ h3 {
         p {
             font-size: 1.2em;
             margin-bottom: 3.500em;
+        }
+
+        @include breakpoint($mid) {
+            width: 100%;
+            position: static;
+            padding-right: 0;
+            text-align: center;
+
+            .course-logo {
+                position: static;
+                margin-bottom: 1em;
+
+                img {
+                    width: 40%;
+                }
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h4 {
+              margin-bottom: 0.4em;
+            }
         }
     }
 
@@ -568,7 +687,24 @@ h3 {
         color: #000;
     }
 
+  @include breakpoint($mid) {
+    
+    h2 {
+      text-align: center;
+    }
+
+    .content {
+
+      > div, aside {
+        float: none;
+        display: block;
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
 }
+
 
 // internal pages - content
 .padded-content {
@@ -580,10 +716,39 @@ h3 {
 }
 
 .map {
+
+  p {
+      text-align: right;
+  }
+
+  @include breakpoint($mid) {
+
+    > div {
+      float: none !important;
+      display: block !important;
+      width: 100% !important;
+      // margin: 0 !important;
+    }
+
     p {
-        text-align: right;
+      text-align: left;
+    }
+
+    .span7 {
+      margin-top: 2em;
+    }
+  }
+}
+
+// For content pages like contact
+@include breakpoint($mid) {
+  
+    h2 {
+      text-align: center;
     }
 }
+
+
 // makes the .ico-calendar icon a container to add a day with the data-day attribute
 .ico-calendar:after {
     content: attr(data-day);
@@ -628,49 +793,70 @@ footer {
         background-color: rgba(0,0,0,0.88);
         border-bottom: 1px solid #222;
         padding: 3.5em 0;
+
+        @include breakpoint($mid) {
+            text-align: center;
+        }
     }
 
     .footerMain {
-        background-color: rgba(0,0,0,0.9);
-        padding: 3.125em 0;
+      background-color: rgba(0,0,0,0.9);
+      padding: 3.125em 0;
 
-        .ico-logo-header {
-            margin-bottom: 1.25em;
+      .ico-logo-header {
+          margin-bottom: 1.25em;
+      }
+
+      .social {
+          margin-top: 1.125em;
+
+          li {
+              display: inline-block;
+              margin-right: 1.250em;
+                  
+              a {
+                  opacity: 1;
+
+                  &:hover {
+                      opacity: 0.6;
+                  }
+              }
+          }
+      }
+
+      .links {
+
+          li{
+              margin-bottom: 0.5em; //8
+
+              a {
+                  color: #c8c8c8;
+                  font-weight: 100;
+
+                  &:hover {
+                      color: $color-primary;
+                  }
+              }
+          }
+      }
+      @include breakpoint($mid) {
+        
+        .container {
+
+          div {
+            float: none;
+            width: 100%;
+            display: block;
+            margin: 0;
+            text-align: center;
+          }
+
+          .span4, .span3 {
+            display: none;
+          }
         }
 
-        .social {
-            margin-top: 1.125em;
-
-            li {
-                display: inline-block;
-                margin-right: 1.250em;
-                    
-                a {
-                    opacity: 1;
-
-                    &:hover {
-                        opacity: 0.6;
-                    }
-                }
-            }
-        }
-
-        .links {
-
-            li{
-                margin-bottom: 0.5em; //8
-
-                a {
-                    color: #c8c8c8;
-                    font-weight: 100;
-
-                    &:hover {
-                        color: $color-primary;
-                    }
-                }
-            }
-        }
-
+      }
 
     }
 }

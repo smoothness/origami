@@ -1,0 +1,13 @@
+// Breakpoints via breakpoint
+
+// assume min-width (by default) if only a number
+$mid: max-width 700px;
+
+
+// // set min-width/max-width if both values are numbers
+// $ex-presidents: 600px 800px;
+// // if one value is a string, assume a feature/value pair
+// $surfboard-width: max-width 1000px;
+// // string tests together within parentheses, assume each item is a feature value pair
+// $surfboard-height: (min-height 1000px) (orientation portrait);
+

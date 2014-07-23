@@ -31,7 +31,7 @@ title: Academia Origami
 <section class="panel panelLight panelCourses">
     <div class="container">
         <h1>Próximos Cursos</h1>
-        <h2>Julio / Ågosto <span>'04</span></h2>
+        <h2>Julio / Agosto <span>'04</span></h2>
 
         {% for page in site.pages %}
             {% if page.is-curso == true %}
@@ -55,7 +55,7 @@ title: Academia Origami
                                 <p>{{ page.course-duration }}</p>
                                 <div class="course-side-info">
                                     <i class="ico ico-calendar" data-day="{{ page.start-day }}"></i>
-                                    <p>{{ page.small-schedule }}</p>
+                                    <p>{{ page.date }} <br/> {{ page.time }}</p>
                                 </div>
                                 <div class="course-side-info">
                                     <i class="ico ico-location"></i>

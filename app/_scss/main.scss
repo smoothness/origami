@@ -839,6 +839,11 @@ footer {
               }
           }
       }
+
+      .cursos {
+        text-align: right;
+      }
+
       @include breakpoint($mid) {
         
         .container {

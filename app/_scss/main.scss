@@ -252,6 +252,18 @@ h3 {
     }
 }
 
+.panelNext {
+
+    .boxes {
+
+        i {
+            margin-bottom: 1.500em;
+        }
+
+    }
+}
+
+
 // header
 .panelHeader {
     background-image: url(#{$img-path}patterns/canvas-pattern-dark.png);

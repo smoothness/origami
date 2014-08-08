@@ -26,12 +26,11 @@ title: Academia Origami
         </div>
     </div>
 </section>        
-<!-- End section 2 //-->
 
 <section class="panel panelLight panelCourses">
     <div class="container">
-        <h1>Próximos Cursos</h1>
-        <h2>Julio / Agosto <span>'04</span></h2>
+        <h1>Cursos Disponibles</h1>
+        <h2>Agosto / Septiembre <span>'14</span></h2>
 
         {% for page in site.pages %}
             {% if page.is-curso == true %}
@@ -69,3 +68,27 @@ title: Academia Origami
         {% endfor %}
     </div>
 </section>
+
+<section class="panel panelDark panelNext" id="why">
+    <div class="container">
+        <h1>Próximamente</h1>
+        <p>Estamos trabajando en el diseño de los siguientes cursos:</p>
+        <div class="boxes clearfix">
+            <div class="span4">
+                <i class="ico ico-sass-compass">Origami Academy - Sass / Compass</i>
+                <h3>SASS & Compass</h3>
+                <p>SASS el pre-procesador de CSS más utilizado con su monstruo de Framework, Compass.</p>
+            </div>
+            <div class="span4">
+                <i class="ico ico-git">Origami Academy - Git</i>
+                <h3>Git</h3>
+                <p>Manejo de versiones y colaboración, aprenda a utilizar Git totalmente desde la consola.</p>
+            </div>
+            <div class="span4">
+                <i class="ico ico-jekyll">Origami Academy - Jekyll</i>
+                <h3>Jekyll</h3>
+                <p>El generador de sitios y blogs estáticos más funcional y simple de hoy en día.</p>
+            </div>
+        </div>
+    </div>
+</section>        

@@ -25,51 +25,77 @@ title: Academia Origami
             </div>
         </div>
     </div>
-</section>        
-
-<section class="panel panelLight panelCourses">
-    <div class="container">
-        <h1>Cursos Disponibles</h1>
-        <h2>Agosto / Septiembre <span>'14</span></h2>
-
-        {% for page in site.pages %}
-            {% if page.is-curso == true %}
-
-                {% if page.due == true %}
-                <a class="due">
-                {% else %}
-                <a href="{{ page.url }}">
-                {% endif %}
-                    <div class="course clearfix">
-                        <div class="span3 centered">
-                            <img src="img/cursos/{{ page.category }}/{{ page.logo }}" alt="{{ page.title-eng }}"/>
-                        </div>
-                        <div class="span6">
-                            <h3>{{ page.title }}</h3>
-                            <h4>{{ page.title-eng }}</h4>
-                            <p>{{ page.small-description }}</p>
-                        </div>
-                        <div class="span3">
-                            <div>
-                                <p>{{ page.course-duration }}</p>
-                                <div class="course-side-info">
-                                    <i class="ico ico-calendar" data-day="{{ page.start-day }}"></i>
-                                    <p>{{ page.date }} <br/> {{ page.time }}</p>
-                                </div>
-                                <div class="course-side-info">
-                                    <i class="ico ico-location"></i>
-                                    <p>{{ page.small-location }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            {% endif %}
-        {% endfor %}
-    </div>
 </section>
 
-<section class="panel panelDark panelNext" id="why">
+<section class="panel panelLight panelCurrent" id="current">
+    <div class="container">
+        <h1>Cursos Disponibles</h1>
+        <h2>Septiembre / Octubre <span>'14</span></h2>
+        <!-- <p>Estamos trabajando en el diseño de los siguientes cursos:</p> -->
+        <div class="boxes clearfix">
+            <div class="span4">
+                <i class="ico ico-html-css">Origami Academy - HTML & CSS</i>
+                <h3>HTML & CSS</h3>
+                <p><strong>HTML & CSS</strong>, los 2 lenguajes de marcado principales para crear documentos y aplicaciones web.</p>
+                <a href="/cursos/html-css.html" class="btn btn-default">Ver Detalles</a>
+            </div>
+            <div class="span4">
+                <i class="ico ico-javascript">Origami Academy - JavaScript Introductorio</i>
+                <h3>JavaScript Introductorio</h3>
+                <p>El lenguaje de programación de la Web. Curso de <strong>Vanilla JavaScript</strong> para principiantes.</p>
+                <a href="/cursos/javascript-basic.html" class="btn btn-default">Ver Detalles</a>
+            </div>
+            <div class="span4">
+                <i class="ico ico-javascript">Origami Academy - JavaScript Avanzado</i>
+                <h3>JavaScript Avanzado</h3>
+                <p>Segundo nivel del <strong>JavaScript</strong>, aprenda técnicas avanzadas y <strong>ECMAScript 6</strong>.</p>
+                <a href="/cursos/javascript-advanced.html" class="btn btn-default">Ver Detalles</a>
+            </div>
+        </div>
+        <div class="boxes clearfix">
+            <div class="span4">
+                <i class="ico ico-angular">Origami Academy - Angular.js</i>
+                <h3>Angular.js</h3>
+                <p>Aprenda a construir aplicaciones dinámicas "single-page" con esta tecnología de <strong>Google</strong>.</p>
+                <a href="/cursos/angularjs.html" class="btn btn-default">Ver Detalles</a>
+            </div>
+            <div class="span4">
+                <i class="ico ico-backbone">Origami Academy - Backbone.js</i>
+                <h3>Backbone.js</h3>
+                <p>Aprenda a implementar<br/>“Single Page Aplications” <strong>(MV*)</strong> con <strong>Backbone.js</strong></p>
+                <a href="/cursos/backbonejs.html" class="btn btn-default">Ver Detalles</a>
+            </div>
+            <div class="span4">
+                <i class="ico ico-node">Origami Academy - Node.js</i>
+                <h3>Node.js</h3>
+                <p>Aprenda a construir aplicaciones en tiempo real, de peso ligero y escalables con <strong>Node.js</strong></p>
+                <a href="/cursos/introduction-to-nodejs.html" class="btn btn-default">Ver Detalles</a>
+            </div>
+        </div>
+        <div class="boxes clearfix">
+            <div class="span4">
+                <i class="ico ico-wordpress">Origami Academy - WordPress Introductorio</i>
+                <h3>WordPress Introductorio</h3>
+                <p>Aprenda a utilizar esta poderosa plataforma de publicación. <strong>WordPress</strong> es el CMS más utilizado.</p>
+                <a href="/cursos/introduction-to-wordpress.html" class="btn btn-default">Ver Detalles</a>
+            </div>
+            <div class="span4">
+                <i class="ico ico-wordpress">Origami Academy - WordPress Avanzado</i>
+                <h3>WordPress Avanzado</h3>
+                <p>Aprenda a crear <strong>plugins</strong> y <strong>widgets</strong> para <strong>WordPress</strong> y la utilización de su <strong>API</strong>.</p>
+                <a href="cursos/advanced-wordpress.html" class="btn btn-default">Ver Detalles</a>
+            </div>
+            <div class="span4">
+                <i class="ico ico-rails">Origami Academy - Ruby on Rails</i>
+                <h3>Ruby on Rails</h3>
+                <p>Construya aplicaciones Web robustas utilizando el <strong>Framework Ruby on Rails</strong>.</p>
+                <a href="/cursos/ruby-on-rails.html" class="btn btn-default">Ver Detalles</a>
+            </div>
+        </div>
+    </div>
+</section>    
+
+<section class="panel panelDark panelNext" id="next">
     <div class="container">
         <h1>Próximamente</h1>
         <p>Estamos trabajando en el diseño de los siguientes cursos:</p>

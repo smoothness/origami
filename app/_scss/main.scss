@@ -11,6 +11,7 @@
    ========================================================================== */
 
 @import "base";
+@import "buttons";
 
 
 html,
@@ -263,6 +264,11 @@ h3 {
     }
 }
 
+.panelCurrent {
+    p {
+        margin-bottom: 2em;
+    }
+}
 
 // header
 .panelHeader {

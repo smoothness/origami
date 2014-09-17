@@ -1,0 +1,46 @@
+---
+layout: default
+title: Lista de Cursos - Academia Origami
+---
+
+<section class="panel panelLight panelCourses">
+    <div class="container">
+        <h1>Cursos Disponibles</h1>
+        <h2>Septiembre / Octubre <span>'14</span></h2>
+
+        {% for page in site.pages %}
+            {% if page.is-curso == true %}
+
+                {% if page.due == true %}
+                <a class="due">
+                {% else %}
+                <a href="{{ page.url }}">
+                {% endif %}
+                    <div class="course clearfix">
+                        <div class="span3 centered">
+                            <img src="img/cursos/{{ page.category }}/{{ page.logo }}" alt="{{ page.title-eng }}"/>
+                        </div>
+                        <div class="span6">
+                            <h3>{{ page.title }}</h3>
+                            <h4>{{ page.title-eng }}</h4>
+                            <p>{{ page.small-description }}</p>
+                        </div>
+                        <div class="span3">
+                            <div>
+                                <p>{{ page.course-duration }}</p>
+                                <div class="course-side-info">
+                                    <i class="ico ico-calendar" data-day="{{ page.start-day }}"></i>
+                                    <p>{{ page.date }} <br/> {{ page.time }}</p>
+                                </div>
+                                <div class="course-side-info">
+                                    <i class="ico ico-location"></i>
+                                    <p>{{ page.small-location }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

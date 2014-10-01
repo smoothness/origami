@@ -7,10 +7,8 @@ title: Lista de Cursos - Academia Origami
     <div class="container">
         <h1>Cursos Disponibles</h1>
         <h2>Septiembre / Octubre <span>'14</span></h2>
-
         {% for page in site.pages %}
             {% if page.is-curso == true %}
-
                 {% if page.due == true %}
                 <a class="due">
                 {% else %}

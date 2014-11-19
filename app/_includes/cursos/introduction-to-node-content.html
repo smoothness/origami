@@ -29,7 +29,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="{{ page.start-day }}"></i>
-	        <p><span class="date-time">Viernes {{ page.start-day }} de Setiembre / {{ page.time }}</span><br/><strong class="highlighted">Semana 1</strong></p>
+	        <p><span class="date-time">{{ page.date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 1</strong></p>
 	    </div>
 		<ol>
 			<li>Introducción a Node.js</li>
@@ -41,8 +41,8 @@
 	</div>
 	<div class="calendar-item">
 	    <div>
-	        <i class="ico ico-calendar" data-day="3"></i>
-	        <p><span class="date-time">Viernes 3 de Octubre / {{ page.time }}</span><br/><strong class="highlighted">Semana 2</strong></p>
+	        <i class="ico ico-calendar" data-day="11"></i>
+	        <p><span class="date-time">Jueves 11 de Diciembre / {{ page.time }}</span><br/><strong class="highlighted">Semana 2</strong></p>
 	    </div>
 		<ol start="6">
 			<li>FileSystem</li>
@@ -52,8 +52,8 @@
 	</div>
 	<div class="calendar-item">
 	    <div>
-	        <i class="ico ico-calendar" data-day="10"></i>
-	        <p><span class="date-time">Viernes 10 de Octubre / {{ page.time }}</span><br/><strong class="highlighted">Semana 3</strong></p>
+	        <i class="ico ico-calendar" data-day="18"></i>
+	        <p><span class="date-time">Jueves 18 de Diciembre / {{ page.time }}</span><br/><strong class="highlighted">Semana 3</strong></p>
 	    </div>
 		<ol start="9">
 			<li>Streams: Reading, writing, piping</li>
@@ -62,8 +62,8 @@
 	</div>
 	<div class="calendar-item">
 	    <div>
-	        <i class="ico ico-calendar" data-day="17"></i>
-	        <p><span class="date-time">Viernes 17 de Octubre / {{ page.time }}</span><br/><strong class="highlighted">Semana 4</strong></p>
+	        <i class="ico ico-calendar" data-day="8"></i>
+	        <p><span class="date-time">Jueves 8 de Enero / {{ page.time }}</span><br/><strong class="highlighted">Semana 4</strong></p>
 	    </div>
 		<ol start="11">
 			<li>HTTP</li>
@@ -73,8 +73,8 @@
 	</div>
 	<div class="calendar-item">
 	    <div>
-	        <i class="ico ico-calendar" data-day="24"></i>
-	        <p><span class="date-time">Viernes 24 de Octubre / {{ page.time }}</span><br/><strong class="highlighted">Semana 5</strong></p>
+	        <i class="ico ico-calendar" data-day="15"></i>
+	        <p><span class="date-time">Jueves 15 de Enero / {{ page.time }}</span><br/><strong class="highlighted">Semana 5</strong></p>
 	    </div>
 		<ol start="14">
 			<li>Introducción a Express framework</li>
@@ -84,8 +84,8 @@
 	</div>
 	<div class="calendar-item">
 	    <div>
-	        <i class="ico ico-calendar" data-day="31"></i>
-	        <p><span class="date-time">Viernes 31 de Octubre / {{ page.time }}</span><br/><strong class="highlighted">Semana 6</strong></p>
+	        <i class="ico ico-calendar" data-day="22"></i>
+	        <p><span class="date-time">Jueves 22 de Enero / {{ page.time }}</span><br/><strong class="highlighted">Semana 6</strong></p>
 	    </div>
 		<ol start="17">
 			<li>Introduccion a Socket.io</li>
@@ -94,8 +94,8 @@
 	</div>
 	<div class="calendar-item">
 	    <div>
-	        <i class="ico ico-calendar" data-day="7"></i>
-	        <p><span class="date-time">Viernes 7 de Noviembre / {{ page.time }}</span><br/><strong class="highlighted">Semana 7</strong></p>
+	        <i class="ico ico-calendar" data-day="29"></i>
+	        <p><span class="date-time">Jueves 29 de Enero / {{ page.time }}</span><br/><strong class="highlighted">Semana 7</strong></p>
 	    </div>
 		<ol start="19">
 			<li>Conectando Node.js con MongoDB</li>
@@ -105,8 +105,8 @@
 	</div>
 	<div class="calendar-item last">
 	    <div>
-	        <i class="ico ico-calendar" data-day="14"></i>
-	        <p><span class="date-time">Viernes 14 de Noviembre / {{ page.time }}</span><br/><strong class="highlighted">Semana 8</strong></p>
+	        <i class="ico ico-calendar" data-day="5"></i>
+	        <p><span class="date-time">Jueves 5 de Febrero / {{ page.time }}</span><br/><strong class="highlighted">Semana 8</strong></p>
 	    </div>
 		<ol start="22">
 			<li>Deployments a Heroku</li>
@@ -121,19 +121,12 @@
 	<div class="side-top">
 		<div class="calendar-item">
 	        <i class="ico ico-calendar" data-day="{{ page.start-day }}"></i>
-	        <p><span class="date-time">{{ page.start-day }} de Agosto - 14 de Noviembre</span><br/>
+	        <p><span class="date-time">{{ page.date }} - 5 de Febrero</span><br/>
 	       	8 sesiones</p>
 		</div>
-		<div class="calendar-item">
-			<i class="ico ico-location"></i>
-            <p><span class="date-time">TEC Campus San Pedro</span><br/>
-            	Oficentro Condal / 2<sup>do</sup> piso</p>
-        	<p class="address"><small>San Pedro de Montes de Oca<br/>
-        		Contiguo a Muñoz &amp; Nanne<br/>
-        		Piso #2<br/>
-        		El edificio cuenta con amplio parqueo<br/>
-        		<a href="https://www.facebook.com/Oficentro.Condal" target="_blank">Ver Página en Facebook</a></small></p>
-		</div>
+		
+		{% include side-bar-location.html %}
+		
 	</div>
 	<div class="info">
 		<p><strong>Inversión:</strong> $360</p>

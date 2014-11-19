@@ -36,7 +36,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="{{ page.start-day }}"></i>
-	        <p><span class="date-time">Sábado {{ page.start-day }} de Setiembre / {{ page.time }}.</span><br/><strong class="highlighted">Semana 1</strong></p>
+	        <p><span class="date-time">{{ page.date }} / {{ page.time }} / {{ page.time }}.</span><br/><strong class="highlighted">Semana 1</strong></p>
 	    </div>
 		<ol>
 			<li>Introducción (un poco de historia, algunos proyectos que usan Ruby)
@@ -53,8 +53,8 @@
 	</div>
 	<div class="calendar-item">
 	    <div>
-	        <i class="ico ico-calendar" data-day="4"></i>
-	        <p><span class="date-time">Sábado 4 de Octubre / {{ page.time }}.</span><br/><strong class="highlighted">Semana 2</strong></p>
+	        <i class="ico ico-calendar" data-day="17"></i>
+	        <p><span class="date-time">Sábado 17 de Enero / {{ page.time }}.</span><br/><strong class="highlighted">Semana 2</strong></p>
 	    </div>
 		<ol start="4">
 			<li>Clases y Objetos en Ruby</li>
@@ -65,8 +65,8 @@
 	</div>
 	<div class="calendar-item">
 	    <div>
-	        <i class="ico ico-calendar" data-day="11"></i>
-	        <p><span class="date-time">Sábado 11 de Octubre / {{ page.time }}.</span><br/><strong class="highlighted">Semana 3</strong></p>
+	        <i class="ico ico-calendar" data-day="24"></i>
+	        <p><span class="date-time">Sábado 24 de Enero / {{ page.time }}.</span><br/><strong class="highlighted">Semana 3</strong></p>
 	    </div>
 		<ol start="8">
 			<li>La filosofía de Ruby on Rails</li>
@@ -85,8 +85,8 @@
 	</div>
 	<div class="calendar-item">
 	    <div>
-	        <i class="ico ico-calendar" data-day="18"></i>
-	        <p><span class="date-time">Sábado 18 de Octubre / {{ page.time }}.</span><br/><strong class="highlighted">Semana 4</strong></p>
+	        <i class="ico ico-calendar" data-day="31"></i>
+	        <p><span class="date-time">Sábado 31 de Enero / {{ page.time }}.</span><br/><strong class="highlighted">Semana 4</strong></p>
 	    </div>
 		<ol start="14">
 			<li>ActiveRecord
@@ -102,8 +102,8 @@
 	</div>
 	<div class="calendar-item">
 	    <div>
-	        <i class="ico ico-calendar" data-day="25"></i>
-	        <p><span class="date-time">Sábado 25 de Octubre / {{ page.time }}.</span><br/><strong class="highlighted">Semana 5</strong></p>
+	        <i class="ico ico-calendar" data-day="7"></i>
+	        <p><span class="date-time">Sábado 7 de Febrero / {{ page.time }}.</span><br/><strong class="highlighted">Semana 5</strong></p>
 	    </div>
 		<ol start="15">
 			<li>ActionController
@@ -118,8 +118,8 @@
 	</div>
 	<div class="calendar-item">
 	    <div>
-	        <i class="ico ico-calendar" data-day="1"></i>
-	        <p><span class="date-time">Sábado 1 de Noviembre / {{ page.time }}.</span><br/><strong class="highlighted">Semana 6</strong></p>
+	        <i class="ico ico-calendar" data-day="14"></i>
+	        <p><span class="date-time">Sábado 14 de Febrero / {{ page.time }}.</span><br/><strong class="highlighted">Semana 6</strong></p>
 	    </div>
 		<ol start="16">
 			<li>Views
@@ -134,8 +134,8 @@
 	</div>
 	<div class="calendar-item">
 	    <div>
-	        <i class="ico ico-calendar" data-day="8"></i>
-	        <p><span class="date-time">Sábado 8 de Noviembre / {{ page.time }}.</span><br/><strong class="highlighted">Semana 7</strong></p>
+	        <i class="ico ico-calendar" data-day="21"></i>
+	        <p><span class="date-time">Sábado 21 de Febrero / {{ page.time }}.</span><br/><strong class="highlighted">Semana 7</strong></p>
 	    </div>
 		<ol start="17">
 			<li>Configuración de diferentes ambientes (environments)</li>
@@ -150,8 +150,8 @@
 	</div>
 	<div class="calendar-item last">
 	    <div>
-	        <i class="ico ico-calendar" data-day="15"></i>
-	        <p><span class="date-time">Sábado 15 de Noviembre / {{ page.time }}.</span><br/><strong class="highlighted">Semana 8</strong></p>
+	        <i class="ico ico-calendar" data-day="28"></i>
+	        <p><span class="date-time">Sábado 28 de Febrero / {{ page.time }}.</span><br/><strong class="highlighted">Semana 8</strong></p>
 	    </div>
 		<ol start="20">
 			<li>Algunas gemas y recursos interesantes
@@ -173,14 +173,12 @@
 	<div class="side-top">
 		<div class="calendar-item">
 	        <i class="ico ico-calendar" data-day="{{ page.start-day }}"></i>
-	        <p><span class="date-time">{{ page.start-day }} de Agosto - 15 de Noviembre</span><br/>
+	        <p><span class="date-time">{{ page.date }} - 28 de Febrero</span><br/>
 	       	10 sesiones</p>
 		</div>
-		<div class="calendar-item">
-			<i class="ico ico-location"></i>
-            <p><span class="date-time">Universidad Creativa</span></p>
-        	<p class="address"><small>Del cementerio de San Pedro 350 sur, Circunvalación, San Pedro.</small></p>
-		</div>
+
+		{% include side-bar-location.html %}
+		
 	</div>
 	<div class="info">
 		<p><strong>Inversión:</strong> $360</p>

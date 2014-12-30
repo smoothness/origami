@@ -28,7 +28,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="{{ page.start-day }}"></i>
-	        <p><span class="date-time">{{ page.date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 1</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 1</strong></p>
 	    </div>
 		<ol>
 			<li>Qué es WordPress</li>
@@ -44,7 +44,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="16"></i>
-	        <p><span class="date-time">Viernes 16 de Enero / {{ page.time }}</span><br/><strong class="highlighted">Semana 2</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 2</strong></p>
 	    </div>
 		<ol start="9">
 			<li>Anatomía de un tema default</li>
@@ -56,7 +56,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="23"></i>
-	        <p><span class="date-time">Viernes 23 de Enero / {{ page.time }}</span><br/><strong class="highlighted">Semana 3</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 3</strong></p>
 	    </div>
 		<ol start="12">
 			<li>Cómo iniciar un tema custom</li>
@@ -69,7 +69,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="30"></i>
-	        <p><span class="date-time">Viernes 30 de Enero / {{ page.time }}</span><br/><strong class="highlighted">Semana 4</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 4</strong></p>
 	    </div>
 		<ol start="16">
 			<li>Uso de plantillas (templates)</li>
@@ -80,7 +80,7 @@
 	<div class="calendar-item last">
 	    <div>
 	        <i class="ico ico-calendar" data-day="6"></i>
-	        <p><span class="date-time">Viernes 6 de Febrero / {{ page.time }}</span><br/><strong class="highlighted">Semana 5</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 5</strong></p>
 	    </div>
 		<ol start="19">
 			<li>'Custom Themes' básicos (continuación)</li>
@@ -94,27 +94,26 @@
 	<div class="side-top">
 		<div class="calendar-item">
 	        <i class="ico ico-calendar" data-day="{{ page.start-day }}"></i>
-	        <p><span class="date-time">{{ page.date }} - Viernes 6 de Febrero</span><br/>
+	        <p><span class="date-time">{{ page.start-date }}</span><br/>
 	       	5 sesiones</p>
 		</div>
-		
+
 		{% include side-bar-location.html %}
-		
+
 	</div>
 	<div class="info">
-		<p><strong>Inversión:</strong> $225</p>
+		<p><strong>Inversión:</strong> $210</p>
+    <p>Ofrecemos planes de pago en 2 cuotas.</p>
 		<p><strong>Incluye:</strong></p>
 		<ul>
-			<li>15 horas de curso</li>
+      <li>24 horas de entrenamiento</li>
+      <li>Refrigerios diarios</li>
 			<li>T-shirt</li>
 			<li>Certificado de asistencia</li>
 		</ul>
-		<p><strong>Forma de pago:</strong> Transferencia Bancaria<br>
-			Más información sobre forma de pago favor enviar un email a: <a href="mailto:info@origami.academy" target="_blank">info@origami.academy</a></p>
-		<!--
-		<p><strong>***</strong> A las 2 primeras personas en matricular se les regalará el <a href="http://shop.oreilly.com/product/0636920024606.do" target="_blank">Libro Learning Node de O'reilly</a></p>
-		<img src="../img/cursos/node/node.gif" alt="Learning Node"/>
-		-->
+		<p><strong>Forma de pago:</strong><br>
+    Transferencia Bancaria<br>
+		Más información sobre forma de pago favor enviar un email a: <a href="mailto:info@origami.academy" target="_blank">info@origami.academy</a></p>
 	</div>
 
 	{% include side-bar-cursos.html %}

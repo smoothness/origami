@@ -36,7 +36,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="{{ page.start-day }}"></i>
-	        <p><span class="date-time">{{ page.date }} / {{ page.time }} / {{ page.time }}.</span><br/><strong class="highlighted">Semana 1</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 1</strong></p>
 	    </div>
 		<ol>
 			<li>Introducción (un poco de historia, algunos proyectos que usan Ruby)
@@ -54,7 +54,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="17"></i>
-	        <p><span class="date-time">Sábado 17 de Enero / {{ page.time }}.</span><br/><strong class="highlighted">Semana 2</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}.</span><br/><strong class="highlighted">Semana 2</strong></p>
 	    </div>
 		<ol start="4">
 			<li>Clases y Objetos en Ruby</li>
@@ -66,7 +66,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="24"></i>
-	        <p><span class="date-time">Sábado 24 de Enero / {{ page.time }}.</span><br/><strong class="highlighted">Semana 3</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}.</span><br/><strong class="highlighted">Semana 3</strong></p>
 	    </div>
 		<ol start="8">
 			<li>La filosofía de Ruby on Rails</li>
@@ -86,7 +86,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="31"></i>
-	        <p><span class="date-time">Sábado 31 de Enero / {{ page.time }}.</span><br/><strong class="highlighted">Semana 4</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}.</span><br/><strong class="highlighted">Semana 4</strong></p>
 	    </div>
 		<ol start="14">
 			<li>ActiveRecord
@@ -103,7 +103,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="7"></i>
-	        <p><span class="date-time">Sábado 7 de Febrero / {{ page.time }}.</span><br/><strong class="highlighted">Semana 5</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}.</span><br/><strong class="highlighted">Semana 5</strong></p>
 	    </div>
 		<ol start="15">
 			<li>ActionController
@@ -119,7 +119,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="14"></i>
-	        <p><span class="date-time">Sábado 14 de Febrero / {{ page.time }}.</span><br/><strong class="highlighted">Semana 6</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}.</span><br/><strong class="highlighted">Semana 6</strong></p>
 	    </div>
 		<ol start="16">
 			<li>Views
@@ -135,7 +135,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="21"></i>
-	        <p><span class="date-time">Sábado 21 de Febrero / {{ page.time }}.</span><br/><strong class="highlighted">Semana 7</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}.</span><br/><strong class="highlighted">Semana 7</strong></p>
 	    </div>
 		<ol start="17">
 			<li>Configuración de diferentes ambientes (environments)</li>
@@ -151,7 +151,7 @@
 	<div class="calendar-item last">
 	    <div>
 	        <i class="ico ico-calendar" data-day="28"></i>
-	        <p><span class="date-time">Sábado 28 de Febrero / {{ page.time }}.</span><br/><strong class="highlighted">Semana 8</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}.</span><br/><strong class="highlighted">Semana 8</strong></p>
 	    </div>
 		<ol start="20">
 			<li>Algunas gemas y recursos interesantes
@@ -173,25 +173,27 @@
 	<div class="side-top">
 		<div class="calendar-item">
 	        <i class="ico ico-calendar" data-day="{{ page.start-day }}"></i>
-	        <p><span class="date-time">{{ page.date }} - 28 de Febrero</span><br/>
+	        <p><span class="date-time">{{ page.start-date }}</span><br/>
 	       	10 sesiones</p>
 		</div>
 
 		{% include side-bar-location.html %}
-		
+
 	</div>
 	<div class="info">
-		<p><strong>Inversión:</strong> $360</p>
-		<p><strong>Incluye:</strong></p>
+		<p><strong>Inversión:</strong> $336</p>
+    <p>Ofrecemos planes de pago en 2 y 3 cuotas.</p>
+		<p class="marginless"><strong>Incluye:</strong></p>
 		<ul>
-			<li>24 horas de curso</li>
+			<li>24 horas de entrenamiento</li>
 			<li>Refrigerios</li>
 			<li>T-shirt</li>
 			<li>Certificado de asistencia</li>
 		</ul>
-		<p><strong>Forma de pago:</strong> Transferencia Bancaria<br>
-			Más información sobre forma de pago favor enviar un email a: <a href="mailto:info@origami.academy" target="_blank">info@origami.academy</a></p>
-		<p><strong>***</strong> A las 2 primeras personas en matricular se les regalará el <a href="http://www.amazon.com/dp/B00E25KVLW/ref=rdr_kindle_ext_tmb" target="_blank">Libro Ruby on Rails 4.0 Guide</a></p>
+		<p><strong>Forma de pago:</strong><br>
+    Transferencia Bancaria<br>
+		Más información sobre forma de pago favor enviar un email a: <a href="mailto:info@origami.academy" target="_blank">info@origami.academy</a></p>
+		<p><strong>***</strong> A las personas que cancelen en una sola cuota por adelantado se les entregará el libro <a href="http://www.amazon.com/dp/B00E25KVLW/ref=rdr_kindle_ext_tmb" target="_blank"> Ruby on Rails 4.0 Guide</a></p>
 		<img src="../img/cursos/ruby/ruby-on-rails-guide.png" alt="Ruby on Rails Guide"/>
 	</div>
 

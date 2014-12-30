@@ -27,7 +27,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="{{ page.start-day }}"></i>
-	        <p><span class="date-time">{{ page.date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 1</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 1</strong></p>
 	    </div>
 		<ol>
 			<li>Breve diagnóstico</li>
@@ -37,7 +37,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="13"></i>
-	        <p><span class="date-time">Martes 13 de Enero / {{ page.time }}</span><br/><strong class="highlighted">Semana 2</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 2</strong></p>
 	    </div>
 		<ol start="9">
 			<li>Custom Themes Avanzados (continuación)</li>
@@ -47,7 +47,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="20"></i>
-	        <p><span class="date-time">Martes 20 de Enero / {{ page.time }}</span><br/><strong class="highlighted">Semana 3</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 3</strong></p>
 	    </div>
 		<ol start="12">
 			<li>Creación de filtros y funciones avanzadas</li>
@@ -56,7 +56,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="27"></i>
-	        <p><span class="date-time">Martes 27 de Enero / {{ page.time }}</span><br/><strong class="highlighted">Semana 4</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 4</strong></p>
 	    </div>
 		<ol start="16">
 			<li>Creación de un plugin</li>
@@ -65,7 +65,7 @@
 	<div class="calendar-item last">
 	    <div>
 	        <i class="ico ico-calendar" data-day="3"></i>
-	        <p><span class="date-time">Martes 3 de Febrero / {{ page.time }}</span><br/><strong class="highlighted">Semana 5</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 5</strong></p>
 	    </div>
 		<ol start="19">
 			<li>Child themes</li>
@@ -78,18 +78,20 @@
 	<div class="side-top">
 		<div class="calendar-item">
 	        <i class="ico ico-calendar" data-day="{{ page.start-day }}"></i>
-	        <p><span class="date-time">{{ page.date }} - 3 de Febrero</span><br/>
+	        <p><span class="date-time">{{ page.start-date }}</span><br/>
 	       	5 sesiones</p>
 		</div>
 
 		{% include side-bar-location.html %}
-		
+
 	</div>
 	<div class="info">
-		<p><strong>Inversión:</strong> $225</p>
-		<p><strong>Incluye:</strong></p>
+		<p><strong>Inversión:</strong> $210</p>
+    <p>Ofrecemos planes de pago en 2 cuotas.</p>
+		<p class="marginless"><strong>Incluye:</strong></p>
 		<ul>
-			<li>15 horas de curso</li>
+			<li>15 horas de entrenamiento</li>
+      <li>Refrigerios diarios</li>
 			<li>T-shirt</li>
 			<li>Certificado de asistencia</li>
 		</ul>

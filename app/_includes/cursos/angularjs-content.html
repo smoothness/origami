@@ -30,7 +30,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="{{ page.start-day }}"></i>
-	        <p><span class="date-time">{{ page.date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 1</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 1</strong></p>
 	    </div>
 		<ol>
 			<li>Que son Single Page Applications?</li>
@@ -43,8 +43,8 @@
 	</div>
 	<div class="calendar-item">
 	    <div>
-	        <i class="ico ico-calendar" data-day="9"></i>
-	        <p><span class="date-time">Martes 9 de Diciembre / {{ page.time }}</span><br/><strong class="highlighted">Semana 2</strong></p>
+	        <i class="ico ico-calendar" data-day="27"></i>
+	        <p><span class="date-time">Martes 27 de Enero / {{ page.time }}</span><br/><strong class="highlighted">Semana 2</strong></p>
 	    </div>
 		<ol start="5">
 			<li>Notacion JSON y su funcion como medio de transporte y definicion de datos</li>
@@ -55,8 +55,8 @@
 	</div>
 	<div class="calendar-item">
 	    <div>
-	        <i class="ico ico-calendar" data-day="16"></i>
-	        <p><span class="date-time">Martes 16 de Diciembre / {{ page.time }}</span><br/><strong class="highlighted">Semana 3</strong></p>
+	        <i class="ico ico-calendar" data-day="3"></i>
+	        <p><span class="date-time">Martes 3 de Febrero / {{ page.time }}</span><br/><strong class="highlighted">Semana 3</strong></p>
 	    </div>
 		<ol start="9">
 			<li>Bower, Grunt y Yeoman</li>
@@ -67,8 +67,8 @@
 	</div>
 	<div class="calendar-item">
 	    <div>
-	        <i class="ico ico-calendar" data-day="23"></i>
-	        <p><span class="date-time">Martes 23 de Diciembre / {{ page.time }}</span><br/><strong class="highlighted">Semana 4</strong></p>
+	        <i class="ico ico-calendar" data-day="10"></i>
+	        <p><span class="date-time">Martes 10 de Febrero / {{ page.time }}</span><br/><strong class="highlighted">Semana 4</strong></p>
 	    </div>
 		<ol start="13">
 			<li>Accediendo al servidor mediante $http y $resource</li>
@@ -79,8 +79,8 @@
 	</div>
 	<div class="calendar-item">
 	    <div>
-	        <i class="ico ico-calendar" data-day="30"></i>
-	        <p><span class="date-time">Martes 30 de Diciembre / {{ page.time }}</span><br/><strong class="highlighted">Semana 5</strong></p>
+	        <i class="ico ico-calendar" data-day="17"></i>
+	        <p><span class="date-time">Martes 17 de Febrero / {{ page.time }}</span><br/><strong class="highlighted">Semana 5</strong></p>
 	    </div>
 		<ol start="16">
 			<li>Directivas</li>
@@ -90,8 +90,8 @@
 	</div>
 	<div class="calendar-item last">
 	    <div>
-	        <i class="ico ico-calendar" data-day="6"></i>
-	        <p><span class="date-time">Martes 6 de Enero / {{ page.time }}</span><br/><strong class="highlighted">Semana 6</strong></p>
+	        <i class="ico ico-calendar" data-day="24"></i>
+	        <p><span class="date-time">Martes 24 de Febrero / {{ page.time }}</span><br/><strong class="highlighted">Semana 6</strong></p>
 	    </div>
 		<ol start="21">
       <li>Unit Testing con Jasmine y KarmaJS</li>
@@ -99,22 +99,13 @@
 		</ol>
 	</div>
 
-	<h2>Contenido:</h2>
-	<p>Ventajas de usar un approach MVC del lado del cliente, comparando una solución de jQuery contra lo que se puede hacer en Angular, revisión de los frameworks más famosos y porque AngularJS es la mejor solución actualmente, revisión de los sitios más importantes de desarrollo web para mantenerse actualizado.</p>
-	<p>Inicio de un proyecto web desde la iteración 0: Pasos para instalar Sublime Text, Jetbrains WebStorm, aprender a trabajar con Git desde la linea de comandos y desde el IDE, aplicando conceptos de branches, los comandos commit, push y pull. Una vez listo el entorno de desarrollo se procede (y de ahora en adelante lo mismo para cada lección) a bajar un repositorio con código para empezar a entender el concepto de Data Binding de Angular, y una revision de la notación JSON.</p>
-	<p>Se empieza a entender como usar el $scope con ejemplos de cómo ayuda a separar la lógica de negocios de la vista, se introduce al estudiante en el concepto de controladores y de cuáles son las mejores prácticas para dividir el código por controladores. Se muestran los nuevos tags y el ciclo de vida para “enseñarle” al browser nuevos comportamientos. Uso de los filtros built-in de Angular y de como crear nuevos filtros.</p>
-	<p>Se muestra el concepto de routing en el front-end, y de como AngularJS lo implementa, cuales son los casos más comunes a la hora de aplicarlo y de porque ayuda a ordenar el código. Creación paso a paso de una inyección de dependencias, además de una explicación de cual es el mecanismo para que esto suceda. Concepto de directivas y de porqué son tan buenas para re-utilizar y modularizar el código, comunicación entre directivas. Todo esto mediante la modificación y explicación linea por linea de una directiva previamente creada para la clase.</p>
-	<p>Vistazo de tecnologías complementarias a AngularJS: Twitter Bootstrap como ayuda para estructurar la vista y su soporte de Responsive Web Design, revisión de los subproyectos de Angular UI para expandir la Vista, practicar con las funciones más comunes para manejar colecciones y objetos con Underscore.js, Scaffolding con Yeoman y de su utilidad para crear la estructura de un proyecto, además de como se liga a Bower para despreocuparse del mantenimiento y búsqueda de scripts de los que dependen un proyecto, y Grunt para automatización de tareas tediosas y repetitivas (pero necesarias) como minificar JS y CSS, actualización de cambios con LiveReload y su extensibilidad. Creación y automatización de unit testing con Jasmine, Angular Mocks y PhantomJS.</p>
-	<p>Validaciones de formularios y de como AngularJS automáticamente agrega comportamientos a los tags <form /> para tareas comunes, suscripción de objetos al $watch para estar viendo sus cambios de estados, $setValidity para validar o invalidar un formulario, ng-submit para capturar los eventos de submit de un formulario. Mayor separación lógica del código mediante los conceptos de service, factory y provider, y en qué caso es adecuado cada uno. Conceptos de AJAX y REST, como hacer solicitudes HTTP al servidor mediante los servicios $http y $resource. Repaso general de la aplicación creada en las lecciones, revisión del futuro próximo del desarrollo web y técnicas para estar siempre actualizado.</p>
-	<p>Vistazo de BAAS (Back-end as a Service) usando Firebase con AngularFire y mostrando alternativas como Parse.com y Hood.ie, y como sacarle provecho a la hora de hacer aplicacioens web.</p>
-	<p>Uso de PureCSS para crear layouts Mobile-First para hacer Mobile Web Apps.</p>
 </div>
 
 <aside class="span4">
 	<div class="side-top">
 		<div class="calendar-item">
 	        <i class="ico ico-calendar" data-day="{{ page.start-day }}"></i>
-	        <p><span class="date-time">{{ page.start-day }} de Diciembre - 6 de Enero</span><br/>
+	        <p><span class="date-time">Inicio: {{ page.start-date }}</span><br/>
 	       	6 sesiones</p>
 		</div>
 
@@ -122,17 +113,19 @@
 
 	</div>
 	<div class="info">
-		<p><strong>Inversión:</strong> $270</p>
-		<p><strong>Incluye:</strong></p>
+		<p><strong>Inversión:</strong> $252</p>
+    <p>Ofrecemos planes de pago en 2 cuotas.</p>
+		<p class="marginless"><strong>Incluye:</strong></p>
 		<ul>
-			<li>18 horas de curso</li>
-			<li>Refrigerios</li>
+			<li>18 horas de entrenamiento</li>
+      <li>Refrigerios diarios</li>
 			<li>T-shirt</li>
 			<li>Certificado de asistencia</li>
 		</ul>
-		<p><strong>Forma de pago:</strong> Transferencia Bancaria<br>
-			Más información sobre forma de pago favor enviar un email a: <a href="mailto:info@origami.academy" target="_blank">info@origami.academy</a></p>
-		<p><strong>***</strong> A las 2 primeras personas en matricular se les regalará el <a href="http://shop.oreilly.com/product/0636920028055.do" target="_blank">Libro Angular.js de O'reilly</a></p>
+		<p><strong>Forma de pago:<br></strong>
+    Transferencia Bancaria.<br/>
+    Más información sobre forma de pago favor enviar un email a: <a href="mailto:info@origami.academy" target="_blank">info@origami.academy</a></p>
+		<p><strong>***</strong> A las personas que cancelen en una sola cuota por adelantado se les entregará el libro <a href="http://shop.oreilly.com/product/0636920033486.do" target="_blank">Libro AngularJS Up & Running de O'reilly</a> de cortesía.</p>
 		<img src="../img/cursos/angular/angular.gif" alt="Angular.js"/>
 	</div>
 

@@ -6,7 +6,7 @@ title: Lista de Cursos - Academia Origami
 <section class="panel panelLight panelCourses">
     <div class="container">
         <h1>Cursos Disponibles</h1>
-        <h2>Septiembre / Octubre <span>'14</span></h2>
+        <h2>Enero <span>2015</span></h2>
         {% for page in site.pages %}
             {% if page.is-curso == true %}
                 {% if page.due == true %}
@@ -28,7 +28,7 @@ title: Lista de Cursos - Academia Origami
                                 <p>{{ page.course-duration }}</p>
                                 <div class="course-side-info">
                                     <i class="ico ico-calendar" data-day="{{ page.start-day }}"></i>
-                                    <p>{{ page.date }} <br/> {{ page.time }}</p>
+                                    <p>{{ page.start-date }} <br/> {{ page.time }}</p>
                                 </div>
                                 <div class="course-side-info">
                                     <i class="ico ico-location"></i>

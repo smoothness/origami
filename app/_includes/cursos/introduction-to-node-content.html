@@ -29,7 +29,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="{{ page.start-day }}"></i>
-	        <p><span class="date-time">{{ page.date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 1</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 1</strong></p>
 	    </div>
 		<ol>
 			<li>Introducción a Node.js</li>
@@ -42,7 +42,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="11"></i>
-	        <p><span class="date-time">Jueves 11 de Diciembre / {{ page.time }}</span><br/><strong class="highlighted">Semana 2</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 2</strong></p>
 	    </div>
 		<ol start="6">
 			<li>FileSystem</li>
@@ -53,7 +53,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="18"></i>
-	        <p><span class="date-time">Jueves 18 de Diciembre / {{ page.time }}</span><br/><strong class="highlighted">Semana 3</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 3</strong></p>
 	    </div>
 		<ol start="9">
 			<li>Streams: Reading, writing, piping</li>
@@ -63,7 +63,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="8"></i>
-	        <p><span class="date-time">Jueves 8 de Enero / {{ page.time }}</span><br/><strong class="highlighted">Semana 4</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 4</strong></p>
 	    </div>
 		<ol start="11">
 			<li>HTTP</li>
@@ -74,7 +74,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="15"></i>
-	        <p><span class="date-time">Jueves 15 de Enero / {{ page.time }}</span><br/><strong class="highlighted">Semana 5</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 5</strong></p>
 	    </div>
 		<ol start="14">
 			<li>Introducción a Express framework</li>
@@ -85,7 +85,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="22"></i>
-	        <p><span class="date-time">Jueves 22 de Enero / {{ page.time }}</span><br/><strong class="highlighted">Semana 6</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 6</strong></p>
 	    </div>
 		<ol start="17">
 			<li>Introduccion a Socket.io</li>
@@ -95,7 +95,7 @@
 	<div class="calendar-item">
 	    <div>
 	        <i class="ico ico-calendar" data-day="29"></i>
-	        <p><span class="date-time">Jueves 29 de Enero / {{ page.time }}</span><br/><strong class="highlighted">Semana 7</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 7</strong></p>
 	    </div>
 		<ol start="19">
 			<li>Conectando Node.js con MongoDB</li>
@@ -106,7 +106,7 @@
 	<div class="calendar-item last">
 	    <div>
 	        <i class="ico ico-calendar" data-day="5"></i>
-	        <p><span class="date-time">Jueves 5 de Febrero / {{ page.time }}</span><br/><strong class="highlighted">Semana 8</strong></p>
+	        <p><span class="date-time">{{ page.start-date }} / {{ page.time }}</span><br/><strong class="highlighted">Semana 8</strong></p>
 	    </div>
 		<ol start="22">
 			<li>Deployments a Heroku</li>
@@ -121,24 +121,27 @@
 	<div class="side-top">
 		<div class="calendar-item">
 	        <i class="ico ico-calendar" data-day="{{ page.start-day }}"></i>
-	        <p><span class="date-time">{{ page.date }} - 5 de Febrero</span><br/>
+	        <p><span class="date-time">{{ page.start-date }}</span><br/>
 	       	8 sesiones</p>
 		</div>
-		
+
 		{% include side-bar-location.html %}
-		
+
 	</div>
 	<div class="info">
-		<p><strong>Inversión:</strong> $360</p>
+		<p><strong>Inversión:</strong> $336</p>
+    <p>Ofrecemos planes de pago en 2 y 3 cuotas.</p>
 		<p><strong>Incluye:</strong></p>
 		<ul>
-			<li>24 horas de curso</li>
+      <li>24 horas de entrenamiento</li>
+      <li>Refrigerios diarios</li>
 			<li>T-shirt</li>
 			<li>Certificado de asistencia</li>
 		</ul>
-		<p><strong>Forma de pago:</strong> Transferencia Bancaria<br>
-			Más información sobre forma de pago favor enviar un email a: <a href="mailto:info@origami.academy" target="_blank">info@origami.academy</a></p>
-		<p><strong>***</strong> A las 2 primeras personas en matricular se les regalará el <a href="http://shop.oreilly.com/product/0636920024606.do" target="_blank">Libro Learning Node de O'reilly</a></p>
+		<p><strong>Forma de pago:</strong><br>
+    Transferencia Bancaria<br>
+		Más información sobre forma de pago favor enviar un email a: <a href="mailto:info@origami.academy" target="_blank">info@origami.academy</a></p>
+		<p><strong>***</strong> A las personas que cancelen en una sola cuota por adelantado se les entregará el libro <a href="http://shop.oreilly.com/product/0636920024606.do" target="_blank"> Learning Node de O'reilly</a> de cortesía.</p>
 		<img src="../img/cursos/node/node.gif" alt="Learning Node"/>
 	</div>
 

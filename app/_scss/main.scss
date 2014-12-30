@@ -190,11 +190,11 @@ h3 {
     p {
         padding: 0 10em;
     }
-    
+
     &.panelLight {
         background-image: url(#{$img-path}patterns/canvas-pattern-light.png);
     }
-    
+
     &.panelDark {
         background-image: url(#{$img-path}patterns/canvas-pattern-dark.png);
     }
@@ -391,11 +391,11 @@ h3 {
 }
 
 .panelWhy {
-    
+
 }
 
 .panelCourses {
-    
+
     h2 {
         margin-top: 2.500em;  //70
         margin-bottom: 1.429em; //40
@@ -405,7 +405,7 @@ h3 {
         font-size: 1.4em;
         }
     }
-    
+
     .container > a {
         display: block;
     }
@@ -438,7 +438,7 @@ h3 {
         }
 
         .span3:last-child {
-    
+
             p {
                 font-size: 0.875em; //14
                 line-height: 140%;
@@ -468,7 +468,7 @@ h3 {
         }
 
         @include breakpoint($mid) {
-          
+
           > div {
             width: 100%;
             float: none;
@@ -493,11 +493,11 @@ h3 {
 
 .course-landing {
     padding: 4.375em 0; //70
-    
+
     > header {
         padding-right: 14em; //230
         position: relative;
-    
+
         .course-logo {
             position: absolute;
             right: 0;
@@ -557,7 +557,7 @@ h3 {
     h2 {
         margin-bottom: 0.4285em; //12
     }
-    
+
     .calendar-item {
         border-bottom: 1px solid #DDD;
         margin-bottom: 1.5em;
@@ -620,7 +620,7 @@ h3 {
 
     aside {
         background-color: #F4F4F4;
-        
+
         .side-top {
             background-color: #EEE;
             padding: 1.5em;
@@ -629,7 +629,7 @@ h3 {
 
         .calendar-item {
             border: 0;
-            
+
             &:last-child {
                 margin: 0;
             }
@@ -642,19 +642,25 @@ h3 {
         }
 
         .address {
-            margin-top: 1em;
+            font-size: 0.9375em;
+            line-height: 140%;
+            margin-top: 0.75em;
         }
 
         .info {
             padding: 1.5em;
 
             p, ul {
-                font-size: 0.8125em; //13
-                margin: 0 0 0.8em 0;
+                font-size: 0.875em; //14
+                margin: 0 0 1.5em;
             }
 
             ul {
                 margin-left: 1.5em;
+            }
+
+            .marginless {
+              margin: 0;
             }
         }
 
@@ -692,7 +698,7 @@ h3 {
                     &:hover {
 
                         color: #777;
-                        
+
                         &:after {
                             background-color: $color-primary;
                             border-color: $color-primary;
@@ -712,7 +718,7 @@ h3 {
     }
 
   @include breakpoint($mid) {
-    
+
     h2 {
       text-align: center;
     }
@@ -766,7 +772,7 @@ h3 {
 
 // For content pages like contact
 @include breakpoint($mid) {
-  
+
     h2 {
       text-align: center;
     }
@@ -837,7 +843,7 @@ footer {
           li {
               display: inline-block;
               margin-right: 1.250em;
-                  
+
               a {
                   opacity: 1;
 
@@ -869,7 +875,7 @@ footer {
       }
 
       @include breakpoint($mid) {
-        
+
         .container {
 
           div {
@@ -909,7 +915,7 @@ footer {
 
     .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
         &:last-child {
-            @include omega;    
+            @include omega;
         }
     }
 
